@@ -4,6 +4,7 @@ This program is used if you want to play minecraft without dedicated server and 
 ## What do you need
   - download file cloud system, in my case I'm using [onedrive](https://www.microsoft.com/en-ww/microsoft-365/onedrive/online-cloud-storage). Make sure it's automatically sync
  - download and install  [minecraft server](https://www.minecraft.net/en-us/download/server)  (or other mod server) inside cloud system directory
+ - Right click on minecraft server folder, and choose always keep in this device
  - Make sure your server is working fine 
   - Install zerotier [here](https://www.zerotier.com/)
 
