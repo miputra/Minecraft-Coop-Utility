@@ -12,7 +12,7 @@ This program is used if you want to play minecraft without dedicated server and 
  - Close the server if it's running
  - Download minecraft coop utility [here](https://github.com/miputra/Minecraft-Coop-Utility/releases)
  - Extract zip to server directory
- - In File "PUT YOUR SERVER IP HERE.txt", set you and your friends zero tiers IPs. Remove and replace placeholder domain in there
+ - In File "PUT YOUR SERVER IP HERE.txt", set the value with yours and your friends zero tiers IPs. Remove and replace placeholder domain in there
  - In File "launcher.conf", fill "launcher" value with server file name
  - In File "launcher.conf", fill "service_link" value with your cloud system
  - Now everytime you want to run the server, Just run "RUN MINECRAFT SERVER.exe", and it will check if there any server online. If there is no one online, then you can run the server. If your friend online, the program will notify you
