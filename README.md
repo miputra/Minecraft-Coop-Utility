@@ -1,5 +1,5 @@
 # Minecraft Coop Utility
-This program is used to prevent multiple instance of minecraft server when playing coop. The program will check if any of your friend already run the server, so there will be no multiple instance of server running and overwrite files in the cloud. It's gonna be a headache when you playing hours and realized that your progress already overwriten by your friend.
+This program is used if you want to play minecraft without dedicated server and used to prevent multiple instance of minecraft server when playing coop. The program will check if any of your friend already run the server, so there will be no multiple instance of server running and overwrite files in the cloud. It's gonna be a headache when you playing hours and realized that your progress already overwriten by your friend.
 
 ## What do you need
   - download file cloud system, in my case I'm using [onedrive](https://www.microsoft.com/en-ww/microsoft-365/onedrive/online-cloud-storage). Make sure it's automatically sync
