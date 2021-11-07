@@ -30,6 +30,7 @@ namespace MinecraftCheckOnline
         static int pid = 0;
         static string launcher = "server.jar";
         static string cloudService = "onedrive.live.com";
+        static bool useOnedrive = true;
 
         static void Main(string[] args)
         {
@@ -72,6 +73,17 @@ namespace MinecraftCheckOnline
                                     Console.ReadLine();
                                     return;
                                 }
+                            }
+                        }
+                        if (c[0].ToLower() == "use_onedrive" )
+                        {
+                            if (c[1].ToLower() == "true")
+                            {
+                                useOnedrive = true;
+                            }
+                            else
+                            {
+                                useOnedrive = false;
                             }
                         }
                     }
@@ -129,6 +141,46 @@ namespace MinecraftCheckOnline
             }
             else
             {
+                if (useOnedrive)
+                {
+                    
+                    var oneDrivePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/Microsoft/OneDrive/OneDrive.exe";
+
+                    int counter = 0;
+                    foreach (Process processes in Process.GetProcessesByName("Microsoft OneDrive"))
+                    {
+                        counter++;
+                    }
+                    foreach (Process processes in Process.GetProcessesByName("OneDrive"))
+                    {
+                        counter++;
+                    }
+                    if (counter <= 0)
+                    {
+                        Process od_process = new Process();
+                        od_process.StartInfo.FileName = oneDrivePath;
+                        try
+                        {
+                            
+                            od_process.Start();
+                            Console.WriteLine("Your one drive is off, so we run them for you. \n" +
+                                "The program will close after you hit enter\n" +
+                                "Check if all file already in sync, then run this launcher again");
+                            Console.ReadLine();
+                            return;
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("Error " + e.Message);
+                            Console.WriteLine("File location " + oneDrivePath);
+                            Console.WriteLine("Cannot run onedrive. Make sure you already install it");
+                            Console.ReadLine();
+                            return;
+                        }
+                        return; //just to make sure. This doesnt run
+                    }
+                }
+
                 var handle = GetConsoleWindow();
 
                 // Hide
