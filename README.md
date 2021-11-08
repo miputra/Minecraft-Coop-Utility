@@ -6,7 +6,8 @@ This program is used if you want to play minecraft without dedicated server and 
  - download and install  [minecraft server](https://www.minecraft.net/en-us/download/server)  (or other mod server) inside cloud system directory
  - Right click on minecraft server folder, and choose always keep in this device
  - Make sure your server is working fine 
-  - Install zerotier [here](https://www.zerotier.com/)
+ - Install a lan software, example zerotier [here](https://www.zerotier.com/)
+ - YOU NEED HAS THE SAME ADAPTER NAME WITH YOUR FRIEND
 
 ## How to Install
    
@@ -16,5 +17,6 @@ This program is used if you want to play minecraft without dedicated server and 
  - In File "PUT YOUR SERVER IP HERE.txt", set the value with yours and your friends zero tiers IPs. Remove and replace placeholder domain in there
  - In File "launcher.conf", fill "launcher" value with server file name
  - In File "launcher.conf", fill "service_link" value with your cloud system
+ - In File "launcher.conf", fill "network_adapter_name" value with your adapter name. IT IS CASE SENSITIVE AND IT WORK WITH PARTIAL NAME (at least it contains part of the adapter name)
  - Now everytime you want to run the server, Just run "RUN MINECRAFT SERVER.exe", and it will check if there any server online. If there is no one online, then you can run the server. If your friend online, the program will prevent you to run server and give you the ip address of who is the server
 
